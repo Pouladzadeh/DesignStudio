@@ -10,55 +10,41 @@
     <!-- ========================================== -->
     <!-- HEADER SECTION -->
     <!-- ========================================== -->
-    <!-- Navigation bar with logo, menu items, search, and mobile toggle -->
+       <!-- ============================================ -->
+    <!-- HEADER SECTION - Navigation and Branding    -->
+    <!-- ============================================ -->
     <header class="header" id="header">
-        <!-- Navigation Container -->
         <div class="nav-container">
-            <!-- Logo -->
             <a href="index.html" class="logo">
-                <img src="img/Logo.svg" alt="Design Studio Logo" style="height:23px; width: 122px; vertical-align:middle;">
+                <img src="img/Logo.svg" alt="Design Studio Logo" style="height:35px; width: 185px; vertical-align:middle;">
             </a>
             
-            <!-- Main Navigation Menu -->
-            <nav class="nav-menu" id="navMenu">
+             <nav class="nav-menu" id="navMenu">
                 <a href="index.html">Home</a>
                 <a href="About.html">About</a>
-                <a href="Services.html">Services</a>
-                <a href="Portfolio.html">Portfolio</a>
-                <a href="Videos.html">Videos</a>
+                <a href="Process.html">Process</a>
+                <a href="Work.html">Work</a>
                 <a href="Gallery.html">Gallery</a>
                 
                 
-                <!-- Mobile-only Navigation Items -->
+                <!-- Mobile-only items -->
                 <div class="mobile-search">
                     <img src="img/Search.svg" alt="Search" class="mobile-search-icon">
                     <span>Search</span>
                 </div>
                 
-                <div class="mobile-cart">
-                    <img src="img/ShoppingCart.svg" alt="Shopping Cart" class="mobile-cart-icon">
-                    <span>Shopping Cart</span>
-                </div>
             </nav>
             
-            <!-- Navigation Actions (Search, Cart, Mobile Toggle) -->
             <div class="nav-actions">
-                <!-- Desktop Search Container -->
                 <div class="search-container">
                     <img src="img/Search.svg" alt="Search" class="search-icon">
                     <input type="text" class="search-box" placeholder="Search">
                 </div>
-                
-                <!-- Shopping Cart Icon -->
-                <a href="#" class="social-icon">
-                    <img src="img/ShoppingCart.svg" alt="ShoppingCart">
-                </a>
-                
-                <!-- Mobile Menu Toggle Button -->
                 <button class="mobile-menu-toggle" id="mobileMenuToggle"></button>
             </div>
         </div>
     </header>
+    <!-- END HEADER SECTION -->
 
     <!-- ========================================== -->
     <!-- MAIN CONTENT SECTION -->
@@ -73,8 +59,8 @@
             <div class="container">
                 <!-- Gallery Header and Description -->
                 <div class="portfolio-header">
-                    <h2>Highlights</h2>
-                    <p>A curated collection of our most impactful design moments—from concept sketches to polished products. Discover the essence of our creative storytelling.</p>
+                    <h2>Project Showcase</h2>
+                    <p>Explore our gallery to see how we present creative projects using an interactive lightbox feature. This section demonstrates how users can browse visual case studies seamlessly combining clean layout, responsive design, and user-friendly interaction.</p>
                 </div>
                 
                 <!-- Filter Navigation Buttons -->
@@ -92,35 +78,83 @@
                 <!-- Responsive grid layout with categorized images -->
                 <div class="gallery-grid" id="gallery">
                     <div class="gallery-item" data-category="web-design">
-                        <img src="img/G1.jpg" alt="Web Development">
+                        <img src="img/G1.png" alt="Web Development">
                     </div>
                     
                     <div class="gallery-item" data-category="branding">
-                        <img src="img/G2.jpg" alt="Branding Design">
+                        <img src="img/G2.png" alt="Branding Design">
                     </div>
                     
                     <div class="gallery-item" data-category="print">
-                        <img src="img/G3.jpg" alt="Print Design">
+                        <img src="img/G3.png" alt="Print Design">
                     </div>
                     
                     <div class="gallery-item" data-category="branding">
-                        <img src="img/G4.jpg" alt="Branding Strategy">
+                        <img src="img/G4.png" alt="Branding Strategy">
                     </div>
                     
                     <div class="gallery-item" data-category="web-design">
-                        <img src="img/G5.jpg" alt="UI Design">
+                        <img src="img/G5.png" alt="UI Design">
                     </div>
                     
                     <div class="gallery-item" data-category="print">
-                        <img src="img/G6.jpg" alt="Print Materials">
+                        <img src="img/G6.png" alt="Print Materials">
                     </div>
                     
                     <div class="gallery-item" data-category="branding">
-                        <img src="img/G7.jpg" alt="Brand Identity">
+                        <img src="img/G7.png" alt="Brand Identity">
                     </div>
                     
                     <div class="gallery-item" data-category="web-design">
-                        <img src="img/G8.jpg" alt="Web Development">
+                        <img src="img/G8.png" alt="Web Development">
+                    </div>
+                </div>
+            </div>
+
+              <!-- ========================================= -->
+                <!-- DESIGN APPROACH ACCORDION SECTION        -->
+                <!-- ========================================= -->
+                <div class="accordion-section">
+                    <h3>Frequently asked questions</h3>
+                    <div class="accordion">
+                        <!-- Accordion Item 1: Discovery & Research -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Discovery & Research</span>
+                                <span class="accordion-icon"><img src="img/arrow-up.svg"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>Every great project starts with listening. We take time to understand your goals, audience, and challenges through conversations, competitor research, and mood board creation,  so we can design with purpose, not just style.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Accordion Item 2: Design & Prototyping -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Design & Prototyping</span>
+                                <span class="accordion-icon"><img src="img/arrow-up.svg"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>This is where ideas come to life. We sketch, wireframe, and build interactive prototypes that help you see how your product will look and feel before launch. Your feedback shapes every round, we design with you, not just for you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Accordion Item 3: Final Delivery & Support -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Final Delivery & Support</span>
+                                <span class="accordion-icon"><img src="img/arrow-up.svg"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>Once everything’s polished and approved, we deliver your final assets and stay by your side through launch. Need a tweak or update later? We’re always here to make sure your design keeps performing beautifully.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -344,7 +378,26 @@
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Restore scrolling
             }
+            
         });
+        // ========================================= //
+        // ACCORDION FUNCTIONALITY                   //
+        // ========================================= //
+        
+        // Accordion toggle function for expandable content sections
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            
+            // Toggle active class on accordion header
+            header.classList.toggle('active');
+            
+            // Toggle active class on accordion content
+            content.classList.toggle('active');
+            
+            // Note: Icon rotation is handled by CSS transitions
+            // SVG arrow icons are used instead of text symbols
+        }
     </script>
 </body>
 </html>

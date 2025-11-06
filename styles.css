@@ -290,7 +290,48 @@ body {
 
 /* Main content container with top margin to account for fixed header */
 .main-content {
-    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;  /* Add bottom padding to create space before footer */
+    min-height: calc(100vh - 300px);  /* Ensure minimum height */
+}
+
+/* About Page Main Content Styling */
+.main-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* About page sections */
+.main-content .section {
+    margin-bottom: 80px;  /* Add margin between sections */
+}
+
+.main-content .section:last-child {
+    margin-bottom: 0;  /* Remove margin from last section since main-content has padding */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .main-content .section {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .main-content .section {
+        margin-bottom: 40px;
+    }
 }
 
 /* Container for centering content with max-width */
@@ -1741,5 +1782,390 @@ tr:last-child td {
     transition: color 0.3s ease;
     text-align: left;
     display: block; /* make the align left properly */
+}
+
+/* ============================================ */
+/*              TESTIMONIALS SECTION            */
+/* ============================================ */
+.testimonials {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.testimonials .section-header {
+    text-align: center;  /* Changed from center to left */
+    margin-bottom: 60px;
+}
+
+.testimonials .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;  /* Explicitly set to left */
+}
+
+.testimonials .section-description {
+    font-size: 1.1rem;
+    color: #666;
+    /*max-width: 800px;
+    margin: 0;  /* Changed from margin: 0 auto to just 0 */
+    line-height: 1.8;
+    text-align: center;  /* Explicitly set to center */
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Force 4 columns on desktop */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quote-icon {
+    margin-bottom: 15px;
+    text-align: center;  /* Center the icon container */
+}
+
+.quote-icon img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    display: inline-block;  /* Ensure the image respects text-align */
+}
+
+.testimonial-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.testimonial-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.client-info {
+    font-size: 0.9rem;
+    color: #999;
+    font-style: italic;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: auto;
+
+}
+
+/* Responsive Design for Testimonials */
+@media (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 60px 20px;
+    }
+    
+    .testimonials .section-title {
+        font-size: 2rem;
+    }
+    
+    .testimonials .section-description {
+        font-size: 1rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;  /* 1 column on mobile */
+        gap: 20px;
+    }
+    
+    .testimonial-card {
+        padding: 25px;
+    }
+}
+
+/* ============================================ */
+/*          BOTTOM NAVIGATION - INFINITE SCROLL */
+/* ============================================ */
+.navbar-bottom {
+    background: #1F2937;
+    padding: 25px 0;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    margin-bottom: 60px;
+}
+
+.nav-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove all padding */
+    min-width: max-content;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%); /* Changed from -50% to -33.333% for 3 sets */
+    }
+}
+
+.nav-item {
+    color: #ecf0f1;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    margin: 0 20px; /* Consistent spacing between items */
+}
+
+.nav-item:hover {
+    color: #4dd0e1;
+}
+
+.nav-separator {
+    color: #7f8c8d;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 10px; /* Small margin for separators */
+}
+
+/* Responsive adjustments for Bottom Navigation */
+@media (max-width: 768px) {
+    .navbar-bottom {
+        padding: 20px 0;
+        margin-bottom: 40px;
+    }
+    
+    .nav-item {
+        font-size: 16px;
+        margin: 0 15px;
+    }
+    
+    .nav-separator {
+        font-size: 16px;
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-bottom {
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+    
+    .nav-item {
+        font-size: 14px;
+        margin: 0 12px;
+    }
+    
+    .nav-separator {
+        font-size: 14px;
+        margin: 0 6px;
+    }
+}
+
+/* ========================================================================
+   DESIGN PROCESS SECTION
+   ======================================================================== */
+.design-process-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    
+}
+
+.design-process-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+
+
+
+.process-header {
+    margin-bottom: 48px;
+}
+
+.process-header h2 {
+     font-size: 30px;
+    color: #1F2937;
+    margin-bottom: 16px;
+    line-height: 1.2;
+
+}
+
+.process-header p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 48px;
+}
+
+.process-step {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: -20px;  /* Changed from 30px to -20px to position on left corner */
+    width: 40px;
+    height: 40px;
+    background: #1C5A98;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(28, 90, 152, 0.3);
+}
+
+.step-content {
+    margin-top: 10px;
+}
+
+.step-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.step-icon img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.process-step h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Responsive Design for Process Section */
+@media (max-width: 1024px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .process-step {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .design-process-section {
+        padding: 60px 0;
+    }
+    
+    .process-header h1 {
+        font-size: 2rem;
+    }
+    
+    .process-header p {
+        font-size: 1rem;
+    }
+    
+    .process-steps {
+        gap: 30px;
+    }
+    
+    .process-step {
+        padding: 25px;
+    }
+    
+    .step-icon img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .design-process-section {
+        padding: 48px 0;
+    }
+    
+    .design-process-section .container {
+        padding: 0 24px;
+    }
+    
+    .process-header {
+        margin-bottom: 40px;
+    }
+    
+    .process-step {
+        padding: 20px;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        top: -15px;
+        left: -15px;  /* Changed from 20px to -15px for consistency */
+    }
+    
+    .step-icon img {
+        width: 60px;
+        height: 60px;
+    }
 }
 

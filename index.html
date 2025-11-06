@@ -14,15 +14,14 @@
     <header class="header" id="header">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="img/Logo.svg" alt="Design Studio Logo" style="height:23px; width: 122px; vertical-align:middle;">
+                <img src="img/Logo.svg" alt="Design Studio Logo" style="height:35px; width: 185px; vertical-align:middle;">
             </a>
             
             <nav class="nav-menu" id="navMenu">
                 <a href="index.html">Home</a>
                 <a href="About.html">About</a>
-                <a href="Services.html">Services</a>
-                <a href="Portfolio.html">Portfolio</a>
-                <a href="Videos.html">Videos</a>
+                <a href="Process.html">Process</a>
+                <a href="Work.html">Work</a>
                 <a href="Gallery.html">Gallery</a>
                 
                 <!-- Mobile-only items -->
@@ -31,10 +30,6 @@
                     <span>Search</span>
                 </div>
                 
-                <div class="mobile-cart">
-                    <img src="img/ShoppingCart.svg" alt="Shopping Cart" class="mobile-cart-icon">
-                    <span>Shopping Cart</span>
-                </div>
             </nav>
             
             <div class="nav-actions">
@@ -42,9 +37,6 @@
                     <img src="img/Search.svg" alt="Search" class="search-icon">
                     <input type="text" class="search-box" placeholder="Search">
                 </div>
-                <a href="#" class="social-icon">
-                    <img src="img/ShoppingCart.svg" alt="ShoppingCart">
-                </a>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle"></button>
             </div>
         </div>
@@ -62,12 +54,67 @@
         
         <!-- Main hero content with headline, description, and CTA button -->
         <div class="hero-content">
-            <h1>Simple Ideas. Bold Design.</h1>
-            <p>We craft clean, thoughtful digital experiences, from brands to interfaces, that connect with people.</p>
-            <a href="/Gallery.html" class="cta-button">See Our Work</a>
+            <h1>Creative design for your startup</h1>
+            <p>Get exceptional, unlimited design tailored for your startups needs. We focus on quality and speed to help your business stand out.</p>
+            <a href="Gallery.html" class="cta-button">Browse all Services</a>
         </div>
     </section>
     <!-- END HERO SECTION -->
+
+    <!-- ============================================ -->
+    <!-- BOTTOM NAVIGATION - Infinite Scroll         -->
+    <!-- ============================================ -->
+    <!-- Bottom Navigation - Infinite Scroll -->
+    <section class="navbar-bottom">
+        <div class="nav-track">
+            <!-- First set -->
+            <div class="nav-content">
+                <span class="nav-item">Company</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Agency</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Venture</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Startup</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Institute</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Enterprise</span>
+                <span class="nav-separator">✦</span>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="nav-content">
+                <span class="nav-item">Company</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Agency</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Venture</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Startup</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Institute</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Enterprise</span>
+                <span class="nav-separator">✦</span>
+            </div>
+            <!-- Third set for extra smoothness -->
+            <div class="nav-content">
+                <span class="nav-item">Company</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Agency</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Venture</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Startup</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Institute</span>
+                <span class="nav-separator">✦</span>
+                <span class="nav-item">Enterprise</span>
+                <span class="nav-separator">✦</span>
+            </div>
+        </div>
+    </section>
+    <!-- END BOTTOM NAVIGATION -->
 
     <!-- ============================================ -->
     <!-- FEATURED PROJECTS SECTION - Portfolio       -->
@@ -77,7 +124,6 @@
         <div class="container">
             <!-- Section header with title and description -->
             <div class="section-header">
-                <div class="section-subtitle">What we do?</div>
                 <h2 class="section-title">Featured Project</h2>
                 <p class="section-description">
                     Take a closer look at some of our latest client work, from bold branding to seamless digital platforms. Each project tells a unique story through strategic design.
@@ -122,7 +168,6 @@
         <div class="container">
             <!-- Section header with title and description -->
             <div class="section-header">
-                <div class="section-subtitle">Why Choose Us?</div>
                 <h2 class="section-title">Our Services</h2>
                 <p class="section-description">
                     From initial discovery to final launch, we offer a wide range of design solutions. Whether you're building a brand from scratch or refining a user journey, we tailor every detail to your vision.
@@ -166,6 +211,62 @@
         </div>
     </section>
     <!-- END SERVICES SECTION -->
+
+    <!-- ============================================ -->
+    <!-- TESTIMONIALS SECTION - Client Reviews       -->
+    <!-- ============================================ -->
+    <!-- Testimonials Section - Client feedback and reviews -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <!-- Section header with title and description -->
+            <div class="section-header">
+                <h2 class="section-title">What Our Client Say</h2>
+                <p class="section-description">
+                    From initial discovery to final launch, we offer a wide range of design solutions. Whether you're building a brand from scratch or refining a user journey, we tailor every detail to your vision.
+                </p>
+            </div>
+            
+            <!-- Grid layout for testimonial cards -->
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <img src="img/quote-left.svg" alt="Quote" style="width: 40px; height: 40px;">
+                    </div>
+                    <h3>elevated our brand beyond expectations!</h3>
+                    <p>Their strategic approach and attention to detail helped us capture our vision perfectly. Every design decision felt intentional and tailored.</p>
+                    <p class="client-info">— Emma Lopez, Marketing Director, Vancouver, BC</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <img src="img/quote-left.svg" alt="Quote" style="width: 40px; height: 40px;">
+                    </div>
+                    <h3>Creativity, precision, and seamless collaboration.</h3>
+                    <p>Working with Design studio was effortless. They understood our goals from day one and delivered visuals that resonated with our audience.</p>
+                    <p class="client-info">— Daniel Kim, Product Manager, San Francisco, CA</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <img src="img/quote-left.svg" alt="Quote" style="width: 40px; height: 40px;">
+                    </div>
+                    <h3>A perfect balance of artistry and strategy.</h3>
+                    <p>Their design process is thoughtful and inspiring. Our new visual identity feels modern, cohesive, and truly ours.</p>
+                    <p class="client-info">— Sarah Patel, Brand Founder, Seattle, WA</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <img src="img/quote-left.svg" alt="Quote" style="width: 40px; height: 40px;">
+                    </div>
+                    <h3>Design that speaks for itself.</h3>
+                    <p>Design studio's ability to translate complex ideas into simple, elegant visuals is unmatched. Highly recommend for anyone looking to revive their brand.</p>
+                    <p class="client-info">— James Chen, Creative Lead, Toronto, ON</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END TESTIMONIALS SECTION -->
 
     <!-- ============================================ -->
     <!-- FOOTER SECTION - Contact & Links           -->
